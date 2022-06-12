@@ -49,154 +49,124 @@ ln -s /etc/apache2/sites-available/xxx.com.vhost /etc/apache2/sites-enabled/xxx.
 
 ########################################################
 
-password değiştir
-
+//password değiştir
 passwd
 
 ########################################################
 
-kullanıcı sil
-
+//kullanıcı sil
 deluser --remove-home test
 deluser username
 
 ########################################################
 
-kullanıcıları görüntüle
-
+//kullanıcıları görüntüle
 cat /etc/passwd
 cat /etc/shadow
 
 ########################################################
 
-auth.log dosyasını canlı izle
-
-tail -f auth.log
-
-########################################################
-
-klasöre kullanıcı yetkisi ver
-
-useradd -d /var/www/clients/client7/web28 portaltest
-useradd -d /var/www/clients/client7/web28 portaltest -s /bin/bash
+//xxx.log dosyasını canlı izle
+tail -f xxx.log
 
 ########################################################
 
-mysql deki tüm kullanıcıların şifresini değiştir.
-
-UPDATE mysql.user SET PASSWORD=PASSWORD('TwrK9PwR03pDTBeBeKV82')
+//klasöre kullanıcı yetkisi ver
+useradd -d /var/www/clients/client7/web28 username
+useradd -d /var/www/clients/client7/web28 username -s /bin/bash
 
 ########################################################
 
-klasörlere 755 bas
+//mysql deki tüm kullanıcıların şifresini değiştir.
+UPDATE mysql.user SET PASSWORD=PASSWORD('xxxxx')
 
+########################################################
+
+//klasörlere 755 bas
 find * -type d -exec chmod 755 {} +
 
 ########################################################
 
-dosyalara 644 bas
-
+//dosyalara 644 bas
 find * -type f -exec chmod 644 {} +
 
 ########################################################
 
-. ile baslayan dosyalara 644 bas
-
+//. ile baslayan dosyalara 644 bas
 find .* -type f -exec chmod 644 {} +
 
 ########################################################
 
-portal test kullanıcısını client7 grubuna ekle
-
-usermod -a -G client7 portaltest
-
-########################################################
-
-portaltest kullanıcısını sahip yap
-
-chown -R portaltest *
+//username kullanıcısını client7 grubuna ekle
+usermod -a -G client7 username
 
 ########################################################
 
-portaltest kullanıcısını .* dosyalarında sahip yap
-
-chown -R portaltest .*
+//username kullanıcısını sahip yap
+chown -R username *
 
 ########################################################
 
-dosya ara
+//username kullanıcısını .* dosyalarında sahip yap
+chown -R username .*
 
+########################################################
+
+//dosya ara
 find -name *.pdf -type f
 
 ########################################################
 
-ssh ayarları
-
+//ssh ayarları
 nano /etc/ssh/sshd_config
 service sshd restart
 
 ########################################################
 
-mysql backup
-
+//mysql backup
 mysqldump -p -h localhost -u kullaniciAdi databaseAdi > yedekDosyasi.sql
 
 ########################################################
 
-yeni pencere aç
-
+//yeni pencere aç
 screen
 shift+ctrl+A+C
 shift+ctrl+A+N
 
 ########################################################
 
-xxx isminde çalışan uygulamaları görüntüle
-
+//xxx isminde çalışan uygulamaları görüntüle
 ps -aux | grep xxxx
 
 ########################################################
 
-uygulamayı supervisor olarak çalıştır
-
+//uygulamayı supervisor olarak çalıştır
 supervisor uygulama
 
 ########################################################
 
-ssh bağlantılarını ip ile kısıtla
+//ssh bağlantılarını ip ile kısıtla
 /etc/hosts
-
 sshd sshd1 sshd2 : 127.0.0.1 : ALLOW
-sshd sshd1 sshd2 : 212.156.66.38 : ALLOW
-sshd sshd1 sshd2 : 178.210.177.85 : ALLOW
+sshd sshd1 sshd2 : xx.xx.xx.xx : ALLOW
 sshd sshd1 sshd2 : ALL : DENY
 
 ########################################################
 
-timezone ayarı
-
+//timezone ayarı
 tzselect
 
 #####
 
-grafik arayüzlü kurulum
-
+//grafik arayüzlü kurulum
 dpkg-reconfigure tzdata
 
 #####
 
-sadece saat ayarı
-
+//sadece saat ayarı
 date -s "22:43:10"
 
 #####
 
 timedatectl status
 timedatectl set-timezone UTC
-
-########################################################
-
-
-
-########################################################
-
