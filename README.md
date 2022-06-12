@@ -6,3 +6,12 @@
 
 <pre>rm -fr foldername</pre>
 <code>rm -fr foldername</code>
+
+```
+rm -rf foldername
+```
+
+
+'''
+rm -rf foldername
+'''
