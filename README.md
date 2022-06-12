@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="vkIcon.png">
+    <img src="vkIcon.png" style="width: 100px;">
     <br>
     noteBook | w01ki3
 </p>
