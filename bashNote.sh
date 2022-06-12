@@ -170,3 +170,15 @@ date -s "22:43:10"
 
 timedatectl status
 timedatectl set-timezone UTC
+
+########################################################
+
+//ssl sertifika yenileme
+certbot certificates
+certbot renew --force-renewal
+certbot -d damainname.com,www.damainname.com --force-renewal
+systemctl restart httpd
+
+########################################################
+
+
