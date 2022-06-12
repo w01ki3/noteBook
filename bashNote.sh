@@ -181,4 +181,16 @@ systemctl restart httpd
 
 ########################################################
 
+//github ssh için sunucuda key oluştur ve yetkinlik ver
+//1 - ssh key oluştur
+ssh-keygen -t rsa -b 4096 -C "mail@mail.com"
+//2 - arka planda çalıştır
+eval "$(ssh-agent -s)"
+//3 - yetkinlik ver
+ssh-add .ssh/id_rsa
+//4 - public görüntüle
+cat .ssh/id_rsa.pub
+//5 - görüntüleneni kopyala ve burdan add yapıp ekle
+https://github.com/settings/keys
 
+########################################################
