@@ -3,3 +3,5 @@
     <br>
     noteBook | w01ki3
 </p>
+
+<code>rm -fr foldername</code>
