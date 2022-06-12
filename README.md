@@ -4,14 +4,14 @@
     noteBook | w01ki3
 </p>
 
-<pre>rm -fr foldername</pre>
-<code>rm -fr foldername</code>
 
+bashNote
+-
+##### folder delete
 ```
 rm -rf foldername
 ```
-
-
-'''
-rm -rf foldername
-'''
+##### folder compress
+```
+tar -zcvf public_html.tar.gz html
+```
