@@ -41,6 +41,7 @@ pscp.exe username@xx.xx.xx.xx:/var/www/dbbkp20201108.sql D:\privateJobs\download
 ##### link
 ```
 ln -s /etc/apache2/sites-available/xxx.com.vhost /etc/apache2/sites-enabled/xxx.com.vhost
+ln -s /project/storage/app/public /project/public/storage
 ```
 ##### password change
 ```
